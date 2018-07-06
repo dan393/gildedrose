@@ -9,12 +9,14 @@ public class BrieItem implements SimpleItem {
 
     @Override
     public void updateQuality() {
-        item.quality +=1;
+        if (item.quality < 50) {
+            item.quality += 1;
+        }
     }
 
     @Override
     public void updateSellIn() {
-        item.quality -=1;
+        item.sellIn -=1;
     }
 
 }
